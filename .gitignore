@@ -1,0 +1,21 @@
+# Ignorar node_modules de frontend y backend
+**/node_modules
+
+# Ignorar dist o build (archivos generados)
+**/dist
+**/build
+
+# Ignorar archivos de log
+**/*.log
+logs
+npm-debug.log*
+
+# Archivos de entorno (credenciales, configuraciones privadas)
+.env
+.env.*.local
+
+# Archivos del editor o sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
