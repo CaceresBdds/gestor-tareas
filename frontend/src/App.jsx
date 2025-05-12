@@ -24,24 +24,24 @@ function App() {
 
 
 
-    return (
-        <>
-            <div className="App">
-                <h1>Mis Tareas</h1>
-                <ul>
-                    {tareas.map((tarea) => (
-                        <li key={tarea.id}>
-                            <strong>{tarea.titulo}</strong>: {tarea.descripcion} - Estado: {tarea.estado}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+return (
+  <>
+    <div className="App">
+      <h1>Mis Tareas</h1>
+      <ul>
+        {tareas.map((tarea) => (
+          <li key={tarea.id}>
+            <strong>{tarea.titulo}</strong>: {tarea.descripcion} - Estado: {tarea.estado}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div className="App">
+      <Calendario />
+    </div>
+  </>
+);
 
-            <div className="App">
-                <Calendario />
-            </div>
-        </>
-    );
 }
 
 export default App;
