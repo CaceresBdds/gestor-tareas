@@ -1,21 +1,74 @@
-# Ignorar node_modules de frontend y backend
-**/node_modules
+# === BACKEND ===
 
-# Ignorar dist o build (archivos generados)
-**/dist
-**/build
+# Dependencias
+node_modules/
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
 
-# Ignorar archivos de log
-**/*.log
-logs
-npm-debug.log*
-
-# Archivos de entorno (credenciales, configuraciones privadas)
+# Entorno
 .env
-.env.*.local
+.env.*
+!.env.example
 
-# Archivos del editor o sistema
-.vscode/
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Directorios y archivos de datos
+/data/
+/uploads/
+/tmp/
+
+# === FRONTEND ===
+
+# Build
+/frontend/dist/
+/frontend/dist-ssr/
+*.local
+
+# === BASES DE DATOS ===
+
+# MySQL
+*.sql
+*.dump
+*.bak
+
+# SQLite (si usas para dev)
+*.sqlite
+*.sqlite3
+*.db
+
+# === HERRAMIENTAS DE DESARROLLO ===
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
 .idea/
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing
+/coverage/
+/.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+.npm/
+
+# === ESPECÍFICOS DE SEQUELIZE ===
+
+# Archivos generados de migraciones y seeders
+/migrations/.migrations-executed
