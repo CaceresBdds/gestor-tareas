@@ -1,8 +1,9 @@
 # === BACKEND ===
 
 # Dependencias
-node_modules/
-/package-lock.json
+/backend/node_modules/
+/backend/package-lock.json
+/backend/dist/
 /yarn.lock
 /pnpm-lock.yaml
 
@@ -28,6 +29,8 @@ lerna-debug.log*
 # === FRONTEND ===
 
 # Build
+/frontend/node_modules/
+/frontend/package-lock.json
 /frontend/dist/
 /frontend/dist-ssr/
 *.local
